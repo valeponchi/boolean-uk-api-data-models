@@ -8,7 +8,7 @@ const getAllRunways = async (req, res) => {
 
 //CREATE ONE DESIGNER
 async function createOneRunway(req, res) {
-	const { runwayId, season, date, location } = req.body
+	const { designerId, season, date, location } = req.body
 
 	const newRunway = {
 		season,
@@ -20,4 +20,13 @@ async function createOneRunway(req, res) {
 	res.json({ data: createdRunway })
 }
 
-module.exports = { getAllRunways, createOneRunway }
+const getOneRunway = async (req, res) => {
+	const { id } = req.params
+
+	const oneRunway = await runway.findUnique({
+		where: { id: parseInt(id) },
+	})
+	res.json({ data: oneRunway })
+}
+
+module.exports = { getAllRunways, createOneRunway, getOneRunway }
