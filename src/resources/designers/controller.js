@@ -7,10 +7,10 @@ const getAllDesigners = async (req, res) => {
 }
 
 //CREATE ONE DESIGNER
-async function createOneDesigners(req, res) {
+async function createOneDesigner(req, res) {
 	const newDesigner = req.body
 	const createdDesigner = await designer.create({ data: newDesigner })
 	res.json({ data: createdDesigner })
 }
 
-module.exports = { getAllDesigners, createOneDesigners }
+module.exports = { getAllDesigners, createOneDesigner }

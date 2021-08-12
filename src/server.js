@@ -6,6 +6,7 @@ const app = express()
 // ROUTERS
 
 const designerRouter = require('./resources/designers/router')
+const runwayRouter = require('./resources/runways/router')
 
 // MIDDLEWARES
 app.use(morgan('dev'))
@@ -13,6 +14,7 @@ app.use(express.json())
 
 // ROUTES
 app.use('/designers', designerRouter)
+app.use('/runways', runwayRouter)
 
 app.get('*', (req, res) => {
 	res.status(404).json({ msg: 'No route is matching your request..' })

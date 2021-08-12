@@ -1,8 +1,8 @@
 const designerRouter = require('express').Router()
 
-const { getAllDesigners, createOneDesigners } = require('./controller')
+const { getAllDesigners, createOneDesigner } = require('./controller')
 
 designerRouter.get('/', getAllDesigners)
-designerRouter.post('/', createOneDesigners)
+designerRouter.post('/', createOneDesigner)
 
 module.exports = designerRouter
