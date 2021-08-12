@@ -4,8 +4,44 @@
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DB_URL")
 }
 
 generator client {
   provider = "prisma-client-js"
+  previewFeatures = ["referentialActions"]
 }
+
+model Runway {
+  id            Int       @id @default(autoincrement())
+  date          DateTime 
+  season        String 
+  location      String 
+  designers     Designer[]
+}
+
+model Designer {
+  id            Int       @id @default(autoincrement())
+  first_name    String    
+  last_name     String    
+  outfits       Outfit[]
+  runwayId      Int
+  runway        Runway    @relation(fields: [runwayId], references: [id])
+}
+
+model Outfit {
+  id            Int       @id @default(autoincrement())
+  type          String 
+  designerId    Int
+  modelId       Int
+  designer      Designer  @relation(fields: [designerId], references: [id])
+  model         Model     @relation(fields: [modelId], references: [id])
+}
+
+model Model {
+  id            Int       @id @default(autoincrement())
+  first_name    String    
+  last_name     String    
+  outfit        Outfit[] 
+}
+
