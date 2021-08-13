@@ -1,33 +1,28 @@
 const { designer, outfit, model } = require('../../utils/dbClient')
 
 //GET ALL DESIGNERS
-const getAllDesigners = async (req, res) => {
-	const allDesigners = await designer.findMany()
-	res.json({ data: allDesigners })
+const getAllOutfits = async (req, res) => {
+	const allOutfits = await outfit.findMany()
+	res.json({ data: allOutfits })
 }
 
-//CREATE ONE DESIGNER
-// async function createOneDesigner(req, res) {
-// 	const newDesigner = req.body
-// 	const createdDesigner = await designer.create({ data: newDesigner })
-// 	res.json({ data: createdDesigner })
-// }
+async function createOneOutfit(req, res) {
+	const { type, modelId, designerId } = req.body
 
-async function createOneDesigner(req, res) {
-	const { runwayId, first_name, last_name } = req.body
-
-	const newDesigner = {
-		first_name,
-		last_name,
+	const newOutfit = {
+		type,
+		modelId,
+		designerId,
 	}
 
-	const createdDesigner = await designer.create({
+	const createdOutfit = await outfit.create({
 		data: {
-			...newDesigner,
-			runway: { connect: { id: parseInt(runwayId) } },
+			...newOutfit,
+			outfit: { connect: { id: parseInt(modelId) } },
+			designer: { connect: { id: parseInt(designerId) } },
 		},
 	})
-	res.json({ data: createdDesigner })
+	res.json({ data: createdOutfit })
 }
 
-module.exports = { getAllDesigners, createOneDesigner }
+module.exports = { getAllOutfits, createOneOutfit }
