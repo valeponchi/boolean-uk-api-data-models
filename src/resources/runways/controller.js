@@ -1,12 +1,6 @@
 const { runway } = require('../../utils/dbClient')
 
-//GET ALL DESIGNERS
-const getAllRunways = async (req, res) => {
-	const allRunways = await runway.findMany()
-	res.json({ data: allRunways })
-}
-
-//CREATE ONE DESIGNER
+//CREATE ONE RUNWAY
 async function createOneRunway(req, res) {
 	const { designerId, season, date, location } = req.body
 
@@ -20,6 +14,13 @@ async function createOneRunway(req, res) {
 	res.json({ data: createdRunway })
 }
 
+//GET ALL RUNWAYS
+const getAllRunways = async (req, res) => {
+	const allRunways = await runway.findMany()
+	res.json({ data: allRunways })
+}
+
+//GET ONE RUNWAY
 const getOneRunway = async (req, res) => {
 	const { id } = req.params
 

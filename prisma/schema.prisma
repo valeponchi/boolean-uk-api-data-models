@@ -35,7 +35,7 @@ model Outfit {
   designerId    Int
   modelId       Int
   designer      Designer  @relation(fields: [designerId], references: [id])
-  model         Model     @relation(fields: [modelId], references: [id])
+  model         Model     @relation(fields: [modelId], references: [id], onDelete: Cascade)
 }
 
 model Model {
