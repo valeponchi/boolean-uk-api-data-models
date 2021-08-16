@@ -1,0 +1,140 @@
+DESIGNERS:
+{
+  "data": [
+    {
+      "id": 1,
+      "first_name": "Salvatore",
+      "last_name": "Pappacena",
+      "runwayId": 1
+    },
+    {
+      "id": 2,
+      "first_name": "Christopher",
+      "last_name": "Korey",
+      "runwayId": 1
+    },
+    {
+      "id": 3,
+      "first_name": "Yolancris",
+      "last_name": "Spain",
+      "runwayId": 1
+    },
+    {
+      "id": 4,
+      "first_name": "Heill",
+      "last_name": "Official",
+      "runwayId": 2
+    },
+    {
+      "id": 5,
+      "first_name": "Miriam",
+      "last_name": "Budet",
+      "runwayId": 2
+    },
+    {
+      "id": 6,
+      "first_name": "Festim",
+      "last_name": "Isufi",
+      "runwayId": 2
+    },
+    {
+      "id": 7,
+      "first_name": "Glaudi",
+      "last_name": "Johana Hernandez",
+      "runwayId": 2
+    },
+    {
+      "id": 8,
+      "first_name": "Zara",
+      "last_name": "Umrigar",
+      "runwayId": 2
+    },
+    {
+      "id": 9,
+      "first_name": "Pistis",
+      "last_name": "Ghana",
+      "runwayId": 3
+    }
+  ]
+}
+
+MODELS
+MODELS:
+{
+  "data": [
+    {
+      "id": 1,
+      "first_name": "Luz",
+      "last_name": "Malena"
+    },
+    {
+      "id": 2,
+      "first_name": "Karolina",
+      "last_name": "Wozniak"
+    },
+    {
+      "id": 3,
+      "first_name": "Armani",
+      "last_name": "Jones"
+    },
+    {
+      "id": 4,
+      "first_name": "Alondra",
+      "last_name": "Balzac"
+    },
+    {
+      "id": 5,
+      "first_name": "Karlo",
+      "last_name": "Santori"
+    },
+    {
+      "id": 6,
+      "first_name": "Agnes",
+      "last_name": "Avuthaj"
+    },
+    {
+      "id": 7,
+      "first_name": "Ana",
+      "last_name": "Penalva"
+    },
+    {
+      "id": 8,
+      "first_name": "Tamara",
+      "last_name": "Oswald"
+    },
+    {
+      "id": 9,
+      "first_name": "Mame Anta",
+      "last_name": "Wade"
+    },
+    {
+      "id": 10,
+      "first_name": "Yurika",
+      "last_name": "Watanabe"
+    }
+  ]
+}
+
+RUNWAYS:
+{
+  "data": [
+    {
+      "id": 1,
+      "date": "2021-09-19T23:00:00.000Z",
+      "season": "ss",
+      "location": "Paris, The Ritz"
+    },
+    {
+      "id": 2,
+      "date": "2021-10-02T23:00:00.000Z",
+      "season": "ss",
+      "location": "New York, 583 Park Avenue"
+    },
+    {
+      "id": 3,
+      "date": "2021-10-14T23:00:00.000Z",
+      "season": "ss",
+      "location": "Milano, PalazzoSerbelloni"
+    }
+  ]
+}

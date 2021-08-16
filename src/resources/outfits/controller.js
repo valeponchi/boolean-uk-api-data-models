@@ -18,7 +18,7 @@ async function createOneOutfit(req, res) {
 	const createdOutfit = await outfit.create({
 		data: {
 			...newOutfit,
-			outfit: { connect: { id: parseInt(modelId) } },
+			model: { connect: { id: parseInt(modelId) } },
 			designer: { connect: { id: parseInt(designerId) } },
 		},
 	})
